@@ -1,0 +1,2 @@
+# with sql
+gcc -o sqlite_test sqlite_test.c -L/usr/lib -lsqlite3
