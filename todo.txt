@@ -1,6 +1,3 @@
-> check sqlite_test.c code from phone
-
 > adc_search_for.c implement ( select from residents where lastname starts_with a* )
 
-> adc_init_db.c implement
-  header file for database name, etc.
+

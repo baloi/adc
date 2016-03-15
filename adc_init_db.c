@@ -22,9 +22,9 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: %s DATABASE\n", argv[0]);
         return (1);
     }
+    rc = sqlite3_open(argv[1], &db);
     */
 
-    //rc = sqlite3_open(argv[1], &db);
     rc = sqlite3_open(database_name, &db);
 
     if (rc) {
