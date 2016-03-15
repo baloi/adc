@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <sqlite3.h>
+#include "adc.h"
 
 static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
@@ -16,12 +17,15 @@ int main(int argc, char **argv) {
     int rc;
     char *stmt = "CREATE TABLE IF NOT EXISTS residents(id text, lastname text, firstname text, schedule text);";
 
+    /*
     if (argc != 2) {
         fprintf(stderr, "Usage: %s DATABASE\n", argv[0]);
         return (1);
     }
+    */
 
-    rc = sqlite3_open(argv[1], &db);
+    //rc = sqlite3_open(argv[1], &db);
+    rc = sqlite3_open(database_name, &db);
 
     if (rc) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
