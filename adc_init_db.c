@@ -15,7 +15,8 @@ int main(int argc, char **argv) {
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
-    char *stmt = "CREATE TABLE IF NOT EXISTS residents(id text, lastname text, firstname text, schedule text);";
+    char *stmt = "CREATE TABLE IF NOT EXISTS residents(id text, lastname text, firstname text, schedule text);"
+                 "CREATE TABLE IF NOT EXISTS treatments(id text, resident_id text, date text);";
 
     /*
     if (argc != 2) {

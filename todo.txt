@@ -1,3 +1,4 @@
 > adc_search_for.c implement ( select from residents where lastname starts_with a* )
 
+> create unit test for adc_init_db.c
 
